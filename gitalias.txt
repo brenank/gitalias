@@ -77,10 +77,12 @@
   b = branch
   c = commit
   d = diff
+  dt = difftool
   f = fetch
   g = grep
   l = log
   m = merge
+  mt = mergetool
   o = checkout
   p = pull
   s = status

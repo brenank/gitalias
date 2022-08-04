@@ -432,6 +432,7 @@ Use graphviz:
   * [git cvs-e](doc/git-cvs-e/) - CVS export
   * [git cvs-i](doc/git-cvs-i/) - CVS import
   * [git d](doc/git-d/) - Short for "git diff"
+  * [git dt](doc/git-dt/) - Short for "git difftool"
   * [git dc](doc/git-dc/) - Diff in order to show changes not yet staged
   * [git dd](doc/git-dd/) - Diff deep - show changes with our preferred options
   * [git debug](doc/git-debug/) - Help debugging builtins
@@ -533,6 +534,7 @@ Use graphviz:
   * [git lsio](doc/git-lsio/) - List files that git is ignoring
   * [git lto](doc/git-lto/) - Show log with items appearing in topological order
   * [git m](doc/git-m/) - Short for "git merge"
+  * [git mt](doc/git-mt/) - Short for "git mergetool"
   * [git ma](doc/git-ma/) - Merge abort i.e. abort the merge process
   * [git mainly](doc/git-mainly/) - Make local like main
   * [git mc](doc/git-mc/) - Merge continue i.e. continue the merge process
