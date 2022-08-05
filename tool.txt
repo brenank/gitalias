@@ -1,0 +1,11 @@
+# -*- mode: gitconfig; -*-
+# vim: set filetype=gitconfig:
+
+##
+# Basic mergetool & difftool Configuration
+
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+	keepBackup = false
