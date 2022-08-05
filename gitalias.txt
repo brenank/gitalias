@@ -151,6 +151,9 @@
   co = checkout
   cong = checkout --no-guess
 
+  # create and checkout branch by user.login name - creates & checkouts a branch named GitLoginName/BranchNameFromArg
+  cub = "!f() { git checkout -b $(git config user.login)/$1 $2; }; f"
+
   ### cherry-pick aliases ###
 
   # cherry-pick - apply the changes introduced by some existing commits; useful for moving small chunks of code between branches.
@@ -1136,6 +1139,13 @@
   # or overly assertive (in general), yet still better than just --force.
   pushy = !git push --force-with-lease
 
+  # Push a specific sha commit with a force and lease, which means that you're pushing in order
+  # to forcefully overwrite the remote, and you want a safety check first:
+  # git checks you're current with remote, and only then allows the push.
+  pushycm = "!f() { \
+    git push --force-with-lease $1:$(git rev-parse --abbrev-ref --symbolic-full-name @{u}); \
+  }; f"
+
   # Do everything we can to synchronize all changes for the current branch.
   #
   #  * git get: fetch and prune, pull and rebase, then update submodules
@@ -1149,6 +1159,13 @@
   #
   get = !git fetch --prune && git pull --rebase && git submodule update --init --recursive
   put = !git commit --all && git push
+
+  # Prune tracking branches and delete any associated local branches
+  bcleanup = "!f() { \
+    git fetch -p && for branch in $(git branch -vv | grep ': gone]' | grep -v '*' | awk '{print $1}'); \
+      do git branch -D $branch; \
+    done; \
+  }; f"
 
   # Do everything we can to make the local repo like the main branch.
   #

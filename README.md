@@ -385,6 +385,7 @@ Use graphviz:
   * [git assumed](doc/git-assumed/) - Show which files are assumed
   * [git au](doc/git-au/) - Short for "git add --update"
   * [git b](doc/git-b/) - Short for "git branch"
+  * [git cub](doc/git-cub/) - Create and checkout branch by user.login name
   * [git bed](doc/git-bed/) - Edit the description of a branch
   * [git bm](doc/git-bm/) - List branches whose tips are reachable from the specified commit (HEAD if not specified)
   * [git bnm](doc/git-bnm/) - List branches whose tips are not reachable from the specified commit (HEAD if not specified)
@@ -559,7 +560,9 @@ Use graphviz:
   * [git pull1](doc/git-pull1/) - Pull just the one current branch
   * [git push1](doc/git-push1/) - Push just the one current branch
   * [git pushy](doc/git-pushy/) - Push with force and lease
+  * [git pushycm](doc/git-pushycm/) - Push commit with force and lease
   * [git put](doc/git-put/) - Put all changes for the current branch
+  * [git bcleanup](doc/git-bcleanup/) - Prune tracking branches and delete any associated local branches
   * [git rb](doc/git-rb/) - Short for "git rebase"
   * [git rba](doc/git-rba/) - Rebase abort i.e. abort the rebase process
   * [git rbc](doc/git-rbc/) - Rebase continue i.e. continue the rebase process
