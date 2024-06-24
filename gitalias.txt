@@ -1143,7 +1143,10 @@
   # to forcefully overwrite the remote, and you want a safety check first:
   # git checks you're current with remote, and only then allows the push.
   pushycm = "!f() { \
-    git push --force-with-lease $1:$(git rev-parse --abbrev-ref --symbolic-full-name @{u}); \
+    local commit_hash=$1; \
+    local remote_branch=$(git rev-parse --abbrev-ref HEAD); \
+    local remote_name=$(git config branch.$(git rev-parse --abbrev-ref HEAD).remote); \
+    git push --force-with-lease "$remote_name" "$commit_hash:$remote_branch"; \
   }; f"
 
   # Do everything we can to synchronize all changes for the current branch.
